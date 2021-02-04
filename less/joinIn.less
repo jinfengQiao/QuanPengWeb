@@ -1,0 +1,905 @@
+#content{
+  padding: 80px 0;
+  .puzzled{
+    width: 100%;
+    height: 420px;
+    background: #FFFFFF;
+
+    ul,li{
+      list-style: none;
+    }
+    .puzzled_1_co{
+      width: 100%;
+      margin-top: 74px;
+      ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .puzz_li_add {
+          background-color: rgba(31, 119, 249, 0.7) !important;
+          color: #ffffff!important;
+        }
+        li {
+          width: 290px;
+          height: 280px;
+          background-color: #ffffff;
+          cursor: pointer;
+          color: #333333;
+          .puzzled_li_b {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 40px 30px 30px;
+            box-sizing: border-box;
+            .title{
+              font-size: 18px;
+              font-family: Microsoft YaHei;
+              font-weight: 400;
+              line-height: 32px;
+            }
+            .title_top{
+              position: absolute;
+              left: 30px;
+              bottom: 30px;
+              span{
+                font-size: 16px;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                line-height: 21px;
+                color: #1F77F9;
+                text-transform: uppercase;
+              }
+              p{
+                margin-top: 5px;
+                font-size: 22px;
+                font-family: Microsoft YaHei;
+                font-weight: bold;
+                line-height: 29px;
+                color: #1F77F9;
+              }
+            }
+          }
+        }
+        li:first-child .puzzled_li_b {
+          background: url("../image/joinIn/puzzled_1_co_img1.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        li:nth-child(2) .puzzled_li_b {
+          background: url("../image/joinIn/puzzled_1_co_img2.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        li:nth-child(3) .puzzled_li_b {
+          background: url("../image/joinIn/puzzled_1_co_img3.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        li:last-child .puzzled_li_b {
+          background: url("../image/joinIn/puzzled_1_co_img4.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+  .shipHelp{
+    width: 100%;
+    background: #F3F4F6;
+    padding: 164px 0 100px;
+    box-sizing: border-box;
+    .btn_b{
+      width: 100%;
+      text-align: center;
+      button{
+        width: 250px;
+        height: 42px;
+        border: 1px solid #1F77F9;
+        border-radius: 21px;
+        font-size: 16px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: #1F77F9;
+        outline: none;
+      }
+    }
+    .posi_b_puzz{
+      margin-top: 90px;
+      margin-bottom: 70px;
+    }
+    ul{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .li_box{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 280px;
+        height: 340px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 48, 107, 0.1411764705882353);
+        padding: 25px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      li{
+        position: relative;
+        width: 280px;
+        height: 340px;
+        img{
+          width: 230px;
+          height: 130px;
+        }
+        .title{
+          margin-top: 40px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          img{
+            margin-right: 10px;
+            width: 27px;
+            height: 25px;
+          }
+          span{
+            font-size: 18px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #333333;
+          }
+        }
+        p{
+          margin-top: 24px;
+          font-size: 16px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          line-height: 30px;
+          color: #7E94BB;
+        }
+      }
+      .puzzled_2_addLi{
+        box-shadow: 0px 0px 10px rgba(0, 25, 84, 0.21);
+        position: absolute;
+        left: 0;
+        top: -10px;
+      }
+    }
+    .tet_b {
+      margin-top: 30px;
+      width: 100%;
+      height: 66px;
+      background: #FFFFFF;
+      border-top: 3px solid #1F77F9;
+      font-size: 18px;
+      font-family: Microsoft YaHei;
+      font-weight: bold;
+      color: #555555;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .whyJoin {
+    width: 100%;
+    padding: 70px 0 110px;
+    box-sizing: border-box;
+    background: url("../image/joinIn/whyJoin_bg.png") no-repeat;
+    background-size: 100% 100%;
+    .puzzled_3_he{
+      width: 100%;
+      text-align: center;
+      position: relative;
+      span{
+        width: 100%;
+        font-size: 70px;
+        font-family: Microsoft YaHei;
+        font-weight: bold;
+        color: #ECECEC;
+        opacity: 0.15;
+      }
+      .title{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        font-size: 38px;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #FFFFFF;
+      }
+    }
+    .puzzled_3_co{
+      padding: 100px 0 0;
+      box-sizing: border-box;
+      .puzzled_3_co_b{
+        min-height: 250px;
+        background: linear-gradient(90deg, rgba(56, 175, 252, 0) 0%, rgba(35, 166, 250, 0.89) 48%, rgba(14, 157, 248, 0) 100%);
+        box-shadow: 0px 0px 30px rgba(0, 39, 118, 0.16);
+        opacity: 1;
+        border-radius: 10px;
+        padding: 0 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .puzzled_3_co_b_1{
+        .puzzled_3_co_le{
+          position: relative;
+          flex: 1;
+          margin-right: 100px;
+          height: 100%;
+        }
+        .puzzled_3_co_ri{
+          flex: 1;
+          ul{
+            li{
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              font-size: 18px;
+              font-family: Microsoft YaHei;
+              font-weight: 400;
+              line-height: 36px;
+              color: #FFFFFF;
+              img{
+                margin-right: 11px;
+                width: 22px;
+                height: 22px;
+              }
+            }
+          }
+        }
+      }
+      .puzzled_3_co_b_2{
+        margin-top: 80px;
+        .puzzled_3_co_le{
+          position: relative;
+          flex: 1;
+          margin-right: 100px;
+          height: 100%;
+        }
+        .puzzled_3_co_ri{
+          flex: 1;
+          ul{
+            li{
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              font-size: 18px;
+              font-family: Microsoft YaHei;
+              font-weight: 400;
+              line-height: 36px;
+              color: #FFFFFF;
+              img{
+                margin-right: 11px;
+                width: 22px;
+                height: 22px;
+              }
+            }
+          }
+        }
+      }
+      .btn_b{
+        width: 100%;
+        margin-top: 90px;
+        text-align: center;
+        button{
+          outline: none;
+          width: 250px;
+          height: 42px;
+          border: 1px solid #FFFFFF;
+          border-radius: 21px;
+          font-size: 16px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          color: #FFFFFF;
+          background: rgba(0,0,0,0);
+        }
+      }
+    }
+  }
+  .successful {
+    padding: 80px 0 110px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    .successful_co{
+      margin-top: 90px;
+      ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+          position: relative;
+          cursor: pointer;
+          width: 260px;
+          height: 328px;
+          background: #FFFFFF;
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          border-radius: 10px;
+          text-align: center;
+          overflow: hidden;
+          //正面
+          .positive{
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            text-align: center;
+            background: #ffffff;
+            .color_b{
+              height: 12px;
+              border-radius: 10px 10px 0px 0px;
+            }
+            .tet_b{
+              width: 100%;
+              font-size: 54px;
+              font-family: Microsoft YaHei;
+              font-weight: bold;
+              color: #FAFAFA;
+            }
+            img{
+              margin-top: 18px;
+              margin-bottom: 24px;
+              width: 144px;
+              height: 149px;
+            }
+            p{
+              font-size: 18px;
+              font-family: Microsoft YaHei;
+              font-weight: 400;
+              color: #333333;
+            }
+          }
+          //反面
+          .back_side{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            text-align: left;
+            padding: 42px 35px;
+            box-sizing: border-box;
+            span{
+              font-size: 18px;
+              font-family: Microsoft YaHei;
+              font-weight: bold;
+              color: #FFFFFF;
+            }
+            p{
+              margin-top: 32px!important;
+              font-size: 18px;
+              font-family: Microsoft YaHei;
+              font-weight: 400;
+              line-height: 40px;
+              color: #FFFFFF;
+            }
+          }
+          //添加的类
+          .color_b_1{
+            background: #5186FF;
+          }
+          .color_b_2{
+            background: #7E50FF;
+          }
+          .color_b_3{
+            background: #E971FF;
+          }
+          .color_b_4{
+            background: #FFB03A;
+          }
+        }
+      }
+    }
+  }
+  .process{
+    background: #F3F7FF;
+    padding: 60px 0 0;
+    .process_co{
+      position: relative;
+      margin-top: 30px;
+      height: 700px;
+      .img_b{
+        position: absolute;
+        left: 0;
+        top: 0;
+        img{
+          width: 100%;
+        }
+      }
+      .tet_b{
+        padding: 120px 0;
+        box-sizing: border-box;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        ul{
+          li:first-child{
+            margin-top: 0;
+          }
+          li{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 60px;
+            .line_b{
+              position: relative;
+              font-size: 50px;
+              font-family: Microsoft YaHei;
+              font-weight: bold;
+              color: #EDF3FF;
+              width: 62px;
+              span{
+                position: absolute;
+                left: 14px;
+                top: 50%;
+                display: block;
+                width: 34px;
+                height: 1px;
+                background-color: #000000;
+              }
+            }
+            .bold_b{
+              margin-left: 40px;
+              margin-right: 30px;
+              font-size: 22px;
+              font-family: Microsoft YaHei;
+              font-weight: bold;
+              color: #333333;
+            }
+            p{
+              font-size: 18px;
+              font-family: Microsoft YaHei;
+              font-weight: 400;
+              color: #666666;
+            }
+          }
+        }
+      }
+    }
+  }
+  .honor{
+    padding: 80px 0 0;
+    box-sizing: border-box;
+    .honor_co {
+      position: relative;
+      margin-top: 80px;
+      width: 100%;
+      .position_b {
+        position: absolute;
+        right: -90px;
+        top: -90px;
+        width: 240px;
+        height: 240px;
+        background: linear-gradient(44deg, #CBE3FF 0%, #006BFA 100%);
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .honor_co_1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 570px;
+        background: url("../image/joinIn/honor_co_bg.png") no-repeat;
+        background-size: 100% 100%;
+        z-index: 2;
+        padding: 60px 96px 86px 147px;
+        box-sizing: border-box;
+        .blue_b{
+          position: absolute;
+          left: 65px;
+          top: 60px;
+          width: 13px;
+          height: 103px;
+          background: #3666E5;
+        }
+        .honor_le{
+          width: 515px;
+          ul{
+            .li_add{
+              padding: 15px 20px 15px 50px;
+              box-sizing: border-box;
+              width: 515px;
+              height: 105px;
+              background: url("../image/joinIn/honor_le_bg.png") no-repeat;
+              background-size: 100% 100%;
+              span{
+                color: #FFFFFF!important;
+              }
+              p{
+                color: #FFFFFF!important;
+              }
+              .img_b_1 {
+                width: 35px;
+                height: 35px;
+                background: url("../image/joinIn/honor_le_icon_add.png") no-repeat;
+                background-size: 100% 100%;
+              }
+            }
+            li:first-child{
+              margin-top: 0;
+              span{
+                color: #FF5252;
+              }
+            }
+            li:nth-child(2){
+              span{
+                color: #FF9337;
+              }
+            }
+            li:last-child{
+              span{
+                color: #7B9EFF;
+              }
+            }
+            li{
+              padding: 15px 60px 15px 0;
+              box-sizing: border-box;
+              margin-top: 50px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              cursor: pointer;
+              .le_b{
+                span{
+                  font-size: 33px;
+                  font-family: Microsoft YaHei;
+                  font-weight: bold;
+                }
+                p{
+                  font-size: 20px;
+                  font-family: Microsoft YaHei;
+                  font-weight: 400;
+                  color: #333333;
+                }
+              }
+              .img_b_1 {
+                width: 35px;
+                height: 35px;
+                background: url("../image/joinIn/honor_le_icon.png") no-repeat;
+                background-size: 100% 100%;
+              }
+            }
+          }
+        }
+        .honor_ri{
+          position: relative;
+          .toggle{
+            position: relative;
+            width: 390px;
+            height: 373px;
+            img{
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+            }
+          }
+          .tog_le{
+            position: absolute;
+            left: -22px;
+            //top: 50%;
+            //margin-top: -22px;
+            top: 187px;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+          }
+          .tog_ri {
+            position: absolute;
+            right: -22px;
+            //bottom: 50%;
+            //margin-bottom: -22px;
+            top: 187px;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+.btn_b_1{
+  width: 100%;
+  margin-top: 60px;
+  text-align: center;
+  button{
+    width: 250px;
+    height: 42px;
+    background: #1F77F9;
+    border-radius: 21px;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #FFFFFF;
+    outline: none;
+    border: 0;
+  }
+}
+.posi_b{
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  span{
+    display: inline-block;
+    position: relative;
+    padding: 0 80px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #1672F9;
+    .posi_le{
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 76px;
+      height: 15px;
+    }
+    .posi_ri{
+      position: absolute;
+      right: 0;
+      top: 3px;
+      width: 76px;
+      height: 15px;
+    }
+  }
+}
+.puzzled_1_he{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  span{
+    width: 100%;
+    font-size: 70px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #F7F7F7;
+  }
+  .title{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 38px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #333333;
+  }
+}
+.circular_b{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #FEE25C;
+}
+.circular {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -92px;
+  margin-top: -92px;
+  width: 184px;
+  height: 184px;
+  background: linear-gradient(145deg, #FED649 0%, #F6FE01 100%, #F6FF00 100%);
+  border-radius: 50%;
+  line-height: 184px;
+  text-align: center;
+  span{
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #3781EE;
+  }
+}
+.circular_b_2{
+  border: 1px solid #54EAD3;
+}
+.circular_2{
+  background: linear-gradient(139deg, #42E5E1 0%, #A1FF97 100%);
+}
+.dian1{
+  position: absolute;
+  left: -45px;
+  top: 55px;
+  width: 4px;
+  height: 4px;
+  background: #FDF5AF;
+  border-radius: 50%;
+}
+.dian2{
+  position: absolute;
+  left: -30px;
+  top: 100px;
+  width: 7px;
+  height: 7px;
+  background: #FDF5AF;
+  border-radius: 50%;
+}
+.dian3{
+  position: absolute;
+  left: -20px;
+  bottom: 10px;
+  width: 14px;
+  height: 14px;
+  background: #FDF5AF;
+  border-radius: 50%;
+}
+.dian4{
+  position: absolute;
+  right: -30px;
+  top: 40px;
+  width: 4px;
+  height: 4px;
+  background: #FDF5AF;
+  border-radius: 50%;
+}
+.dian5{
+  position: absolute;
+  right: -36px;
+  top: 94px;
+  width: 7px;
+  height: 7px;
+  background: #FDF5AF;
+  border-radius: 50%;
+}
+.dian6{
+  background: #4DE8D8!important;
+}
+.animation {
+  -webkit-animation:twinkling 2.1s infinite ease-in-out;
+  animation:twinkling 2.3s infinite ease-in-out;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+.animation2 {
+  -webkit-animation:twinkling 2.5s infinite ease-in-out;
+  animation:twinkling 2.8s infinite ease-in-out;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+@-webkit-keyframes twinkling {
+  0% {
+    opacity:0.2;
+    filter:alpha(opacity=20);
+    -webkit-transform:scale(1);
+  }
+  50% {
+    opacity:0.5;
+    filter:alpha(opacity=50);
+    -webkit-transform:scale(1.12);
+  }
+  100% {
+    opacity:0.2;
+    filter:alpha(opacity=20);
+    -webkit-transform:scale(1);
+  }
+}@keyframes twinkling {
+   0% {
+     opacity:0.4;
+     filter: alpha(opacity=20);
+     -webkit-transform: scale(1);
+   }
+   50% {
+     opacity:0.9;
+     filter: alpha(opacity=50);
+     -webkit-transform: scale(1.12);
+   }
+   100% {
+     opacity:0.4;
+     filter: alpha(opacity=20);
+     -webkit-transform: scale(1);
+   }
+}
+.container_1{
+  width: 1260px!important;
+  margin: 0 auto!important;
+  padding: 0!important;
+}
+
+.yellow{
+  color: #FFC215;
+}
+.Join_in{
+  position: absolute;
+  left: 12.5%;
+  top: 40%;
+  z-index: 100;
+  h2 {
+    font-size: 54px;
+    font-weight: 400;
+    color: white;
+  }
+  p {
+    font-size: 32px;
+    margin-top: 32px!important;
+    color: white;
+  }
+  .input_b{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    .b_box{
+      position: relative;
+      select{
+        -webkit-appearance:none;
+        -moz-appearance: none; //通过padding-left的值让文字居中
+        cursor: pointer;
+      }
+    }
+    .b_box_1:after{
+      content: "";
+      width: 20px;
+      height: 12px;
+      background: url('../image/joinIn/select_sj_icon.png') no-repeat center;
+      position: absolute;
+      right: 20px;
+      top: 45%;
+      pointer-events: none;
+    }
+    .img_b_b{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 42px;
+      height: 52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .img_b_1{
+      width: 22px;
+      height: 20px;
+    }
+    .img_b_2{
+      width: 22px;
+      height: 22px;
+    }
+    .img_b_3{
+      width: 17px;
+      height: 22px;
+    }
+    .line_1{
+      position: absolute;
+      right: 0;
+      top: 19px;
+      width: 1px;
+      height: 14px;
+      background: #B0B0B0;
+    }
+    input,select{
+      width: 230px;
+      height: 52px;
+      padding: 0 50px;
+      box-sizing: border-box;
+      font-size: 14px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      outline: none;
+      border: 0;
+      margin-right: 10px;
+    }
+    button{
+      width: 150px;
+      height: 52px;
+      background: #F2B42A;
+      font-size: 14px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: #FFFFFF;
+      outline: none;
+      border: 0;
+    }
+  }
+}
+

@@ -1,0 +1,183 @@
+<div id="header">
+    <div class="nav">
+        <img class="nav_logo" src="" alt="">
+        <ul class="headList">
+<!--            <li>-->
+<!--                <a href="../index/index.html">首页</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="">商事服务</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/Toplay.html">财税策划</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/Daikai.html">自然人代开</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/Flexible.html">灵活用工</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="">网络货运</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/industry.html">行业资讯</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/AboutUs.html">走进权鹏</a>-->
+<!--            </li>-->
+        </ul>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+         
+        </div>
+<!--        <p class="num">-->
+<!--            <span class="ones">01</span>-->
+<!--            <span>/</span>-->
+<!--            <span>02</span>-->
+<!--        </p>-->
+        <div class="swiper-button-prev"><span></span></div>
+        <div class="swiper-button-next"><span></span></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script>
+    // localStorage.setItem('http', 'http://of.kurohane.com/api/')
+    // localStorage.setItem('url', 'http://of.kurohane.com')
+
+    localStorage.setItem('http', "https://of.tjqpjt.com/api/")
+    localStorage.setItem('url', "http://quanpeng.oss-cn-zhangjiakou.aliyuncs.com/")
+
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+
+    var id= getUrlParam('id')
+    if(id== null) {
+        id= 1
+    }
+
+
+    // 获取导航栏
+    $.post(localStorage.getItem('http') + 'nav/get_top_nav',{},function(res){
+        console.log(res.data);
+        var html= ''
+        $.each(res.data,function(key,val){
+
+            if(id == val.id) {
+                html += '<li class="headList_a">';
+            }else{
+                html += '<li>';
+            }
+
+            if(val.id == 2) {
+                html += '<a target="_blank" href="'+ val.link +'">'+val.name+'</a>';
+                html += '</li>';
+            }else{
+                html += '<a href="'+ val.link +'?id='+ val.id +'">'+val.name+'</a>';
+                html += '</li>';
+            }
+
+        })
+
+
+        $('.headList').html(html)
+
+    });
+
+
+    // 获取swiper
+    $.post(localStorage.getItem('http') + 'banner/get_list',{
+        nav_id: id
+    },function (res) {
+        // console.log(res.data)
+
+        var html= ''
+
+        $.each(res.data,function(key,val) {
+            var desc = val.desc;
+            desc = desc.split(" ");
+            // console.log(desc)
+            html +=  '<div class="swiper-slide">'
+            html +=  '<img src="'+ val.pic_url +'" alt="" style="width: 100%; height: auto;">'
+            html +=  '<div class="content">'
+            html +=  '<div class="ling">'
+            html +=  '<h2>'+ val.title.substring(0,1) +'</h2>'
+            html +=  '<h2>'+ val.title.substring(1) +'</h2>'
+            html +=  '</div>'
+            // html +=  '<h3>依托车联网技术，&nbsp;为无车承运人<br> 提供一站式系统解决方案</h3>'
+            html +=  '<h3>';
+            $.each(desc,function(k,v){
+                html += k > 0 ? "<br/><br/>" : "";
+                html += v;
+            });
+            html += '</h3>';
+
+
+            html +=  '<a class="but" target="blank" href="'+ val.link +'">查看详情 <i class="iconfont icon-jiantou1" style="margin-left: 12px; font-size: 12px;margin-top: 2px;"></i></a>'
+            html +=  '</div>'
+            html +=  '</div>'
+        })
+
+        $('.swiper-wrapper').html(html)
+        var mySwiper = new Swiper ('.swiper-container', {
+            pagination: '.swiper-pagination',
+            // paginationClickable: true, // 点击分页器的指示点分页器会控制Swiper切换。
+            // width:window.innerWidth,
+            loop:true,
+            speed:500,
+            autoplay : {
+                delay: 3000,
+                disableOnInteraction : false,
+            },
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            on: {
+                init: function(){
+                    Slide=this.slides.eq(this.activeIndex);
+                },
+                slideChangeTransitionStart: function(){
+                    var index = this.activeIndex;
+                    $(".num .ones").text('0' + (this.realIndex+1));
+                },
+                slideChangeTransitionEnd: function(){
+                    prevSlide=this.slides[this.previousIndex];
+                    prevSlide.className = "swiper-slide";
+                    $(".swiper-slide-next").attr('class',"swiper-slide");
+                }
+            },
+        })
+
+    })
+
+
+
+    // 获取网站设置
+    $.post(localStorage.getItem('http') + 'setting/get_detail',{},function (res) {
+        // console.log(res.data)
+
+        // logo
+        $('.nav_logo').attr('src',res.data.logo_url)
+
+
+    })
+
+
+
+
+
+
+</script>

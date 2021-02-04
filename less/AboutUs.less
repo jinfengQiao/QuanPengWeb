@@ -1,0 +1,273 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul li{
+  list-style: none;
+}
+a{
+  text-decoration: none!important;
+}
+
+#content{
+  display: flex;
+  flex-direction: column;
+  background: #F5F6FA;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+
+  //one
+
+  .one_content{
+    width: 100%;
+    display: flex;
+    padding-bottom: 80px;
+    .one_content_left{
+      width: 50%;
+      padding-top: 55px;
+      .left_content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 32px 50px 59px 120px;
+        background: white;
+        box-shadow:0px 8px 6px rgba(11,56,123,0.1);
+        position: relative;
+        h2{
+          font-size: 22px;
+          color: #333333;
+          font-weight: 400;
+        }
+        .one_content_p1{
+          font-size: 16px;
+          color: #999999;
+          margin: 10px 0 24px;
+        }
+        .one_content_p2{
+          text-align: left;
+          //width: 657px;
+          font-size: 16px;
+          color: #666666;
+          line-height: 32px;
+        }
+        .one_content_circle{
+          position: absolute;
+          bottom: -25%;
+          right: 59%;
+          display: flex;
+          align-items: center;
+          transform: rotate(90deg);
+          i{
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid rgba(243,130,0,1);
+          }
+          span{
+            display: block;
+            margin-left: 10px;
+            width: 172px;
+            border: 1px solid #DDDDDD;
+          }
+        }
+      }
+    }
+    .one_content_right{
+      img{
+
+      }
+      .one_content_right_background{
+        width: 482px;
+        height: 360px;
+        background: url("../image/AboutUs/one_img.png")no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  //two
+  .two_content{
+    width: 1200px;
+    margin-bottom: 140px;
+    display: flex;
+    justify-content: space-between;
+    .two_content_left{
+      padding-top: 43px;
+      .two_content_left_background{
+        width: 726px;
+        height: 382px;
+        background: url("../image/AboutUs/two_img.png")no-repeat;
+        background-size: cover;
+      }
+    }
+    .two_content_right{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 88px;
+      img{
+
+      }
+      h2{
+        color: #333333;
+        font-weight: 400;
+        font-size: 22px;
+      }
+      .two_content_right_p1{
+        font-size: 18px;
+        color: #999999;
+        margin: 10px 0 24px;
+      }
+      .two_content_right_p2{
+        //width: 384px;
+        line-height:32px;
+        text-align: center;
+        font-size: 16px;
+        color: #999999;
+      }
+    }
+  }
+
+  //three
+  .three{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    background: url("../image/AboutUs/three_background.png")no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .three_content{
+      width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      .three_content_left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 88px;
+        h2{
+          font-size: 22px;
+          font-weight: 400;
+          color: white;
+        }
+        .three_content_left_p1{
+          margin: 10px 24px;
+          font-size: 18px;
+          color: #FFFFFF;
+          opacity: 0.5;
+        }
+        .three_content_left_p2{
+          //width: 818px;
+          color: white;
+          font-size: 16px;
+          text-align: left;
+          line-height: 32px;
+        }
+      }
+      .three_content_right{
+        width: 313px;
+        height: 304px;
+        position: relative;
+        .one_content_circle{
+          position: absolute;
+          top: -22%;
+          right: 16%;
+          display: flex;
+          align-items: center;
+          transform: rotate(90deg);
+          i{
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid rgba(243,130,0,1);
+          }
+          span{
+            display: block;
+            margin-left: 10px;
+            width: 172px;
+            border: 1px solid #DDDDDD;
+          }
+        }
+        .three_content_right_img{
+          position: absolute;
+          bottom: -30%;
+          width: 313px;
+          height: 304px;
+          background: url("../image/AboutUs/three_img.png")no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  //four
+  .four_content{
+    width: 1200px;
+    margin-top: 172px;
+    display: flex;
+    justify-content: space-between;
+    .four_content_left{
+      position: relative;
+      padding-top: 77px;
+      .four_content_background{
+        width: 512px;
+        height: 376px;
+        background: url("../image/AboutUs/four_img.png")no-repeat;
+        background-size: cover;
+      }
+      .one_content_circle{
+        position: absolute;
+        top: -7%;
+        left: -19%;
+        display: flex;
+        align-items: center;
+        transform: rotate(90deg);
+        i{
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 2px solid rgba(243,130,0,1);
+        }
+        span{
+          display: block;
+          margin-left: 10px;
+          width: 172px;
+          border: 1px solid #DDDDDD;
+        }
+      }
+    }
+    .four_content_right{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-left: 88px;
+      img{
+
+      }
+      h2{
+        font-size: 22px;
+        color: #333333;
+        font-weight: 400;
+      }
+      .four_content_right_p1{
+        margin: 10px 0 24px;
+        color: #999999;
+        font-size: 22px;
+      }
+      .four_content_right_p2{
+        //width: 600px;
+        font-size: 16px;
+        color: #707070;
+        line-height: 36px;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,241 @@
+<div id="footer">
+    <div class="footercontent">
+        <div class="footleft">
+            <img class="foot_logo" src="" alt="">
+            <ul class="footbutoom">
+<!--                <li>-->
+<!--                    <a href="">走进权鹏</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="../index/industry.html">行业资讯</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="">友情链接</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="../index/recruit.html">招贤纳士</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="">联系我们</a>-->
+<!--                </li>-->
+            </ul>
+        </div>
+        <div class="footright">
+            <div class="footrightLeft">
+<!--                <div class="footMail">-->
+<!--                    <span>公司邮箱</span>-->
+<!--                    <p>quanpengjt@tjqphb.com</p>-->
+<!--                </div>-->
+<!--                <div class="footMail">-->
+<!--                    <span>公司地址</span>-->
+<!--                    <p>天津市河西区洞庭路与怒江道交口美年广场2-504</p>-->
+<!--                </div>-->
+            </div>
+            <div class="footrightTow">
+<!--                <div class="footMail">-->
+<!--                    <span>全国免费咨询热线</span>-->
+<!--                    <p>400-1025-199</p>-->
+<!--                </div>-->
+<!--                <img src="../image/QRcode.png" alt="">-->
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+<!--        <a href="">Copright 版权所有 天津权鹏集团有限公司 津ICP备19000810号-1</a>-->
+<!--        <a href=""><img src="../image/footer-copyright.png" alt="">津公网安备 12010302001783号</a>-->
+    </div>
+</div>
+
+<div class="customer_service" flag="0">
+    <p>客服热线：400-1025-199</p>
+</div>
+
+
+<div id="phone_footer">
+    <ul class="phone_footer_top">
+<!--        <li>-->
+<!--            <i class="iconfont icon-xinxi"></i>-->
+<!--            <p>quanpengjt@tjqphb.com</p>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <i class="iconfont icon-dianhua1"></i>-->
+<!--            <div class="phone_footer_top_color">-->
+<!--                <p>全国免费咨询热线：</p>-->
+<!--                <p>400-1025-199</p>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <i class="iconfont icon-dizhi"></i>-->
+<!--            <p>天津市河西区洞庭路与怒江道交口美年广场2-504</p>-->
+<!--        </li>-->
+    </ul>
+    <ul class="phone_footer_bottom">
+<!--        <li>-->
+<!--            <a target="_blank" href="www.baidu.com">Copright 版权所有 天津权鹏集团有限公司 津ICP备19000810号-1</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a target="_blank" href="www.baidu.com">-->
+<!--                <img src="../image/footer-copyright.png" alt="">-->
+<!--                <p>津公网安备 12010302001783号</p>-->
+<!--            </a>-->
+<!--        </li>-->
+    </ul>
+</div>
+
+
+<!--上：logo 64-->
+<!--上：文字 72-->
+<!--下：二维码  70-->
+<!--左：60-->
+<!--右：467-->
+
+
+<script>
+
+
+    // 获取底部导航
+    $.post(localStorage.getItem('http') + 'link/get_list',{},function(res) {
+        // console.log(res.data)
+        var html= ''
+
+
+        $.each(res.data.list,function (k,v) {
+            if(v.url != null) {
+                html += '<li>'
+                html += '<a target="_blank" href="'+ v.url +'">'+ v.name +'</a>'
+                html += '</li>'
+            }else{
+                html += '<li>'
+                html += '<a class="contact" style="cursor: pointer">'+ v.name +'</a>'
+                html += '</li>'
+            }
+        })
+
+        $('.footbutoom').html(html)
+
+        // 点击联系我们展开遮罩
+        $('.contact').click(()=> {
+
+
+            $('.customer_service').css({
+                'display': 'flex'
+            })
+            $('#LRdiv2').css({
+                'display': 'none'
+            })
+            $('#LRdiv1').css({
+                'display': 'none'
+            })
+            $('#LRdiv0').css({
+                'display': 'none'
+            })
+            $('#LRdiv3').css({
+                'display': 'none'
+            })
+
+        })
+
+
+        $('.customer_service').click(()=> {
+            $('.customer_service').css({
+                'display': 'none'
+            })
+        })
+
+        $('.customer_service p').click((event)=> {
+            $('.customer_service').css({
+                'display': 'flex'
+            })
+            event.stopPropagation();
+        })
+
+    })
+
+
+
+
+
+
+    // 获取网站设置
+    $.post(localStorage.getItem('http') + 'setting/get_detail',{},function (res) {
+        // console.log(res.data)
+
+        // PC端
+        var html= ''
+        html += '<div class="footMail">'
+        html += '<span>公司邮箱</span>'
+        html += '<p>'+ res.data.email +'</p>'
+        html += '</div>'
+        html += '<div class="footMail">'
+        html += '<span>公司地址</span>'
+        html += '<p>'+ res.data.address +'</p>'
+        html += '</div>'
+
+        $('.footrightLeft').html(html)
+
+
+        // logo
+        $('.foot_logo').attr('src', res.data.logo_url)
+
+        var htmls= ''
+        htmls += '<a target="_blank" href="'+ res.data.icp_url +'">Copright 版权所有 天津权鹏集团有限公司 津ICP备 '+ res.data.icp_num +'</a>'
+        htmls += '<a target="_blank" href="'+ res.data.net_url +'"><img src="../image/footer-copyright.png" alt="">津公网安备 '+ res.data.net_num +'号</a>'
+
+        $('.copyright').html(htmls)
+
+
+        var html_Mail= ''
+        html_Mail += '<div class="footMail">'
+        html_Mail += '<span>全国免费咨询热线</span>'
+        html_Mail += '<p>'+ res.data.phone +'</p>'
+        html_Mail += '</div>'
+        html_Mail += '<img src="'+ res.data.qrcode_url +'" alt="">'
+
+        $('.footrightTow').html(html_Mail)
+
+
+        // 手机端接口
+
+        var phone_html= ''
+
+
+        phone_html+= '<li>'
+        phone_html+= '<i class="iconfont icon-xinxi"></i>'
+        phone_html+= '<p>'+ res.data.email +'</p>'
+        phone_html+= '</li>'
+        phone_html+= '<li>'
+        phone_html+= '<i class="iconfont icon-dianhua1"></i>'
+        phone_html+= '<div class="phone_footer_top_color">'
+        phone_html+= '<p>全国免费咨询热线：</p>'
+        phone_html+= '<p>'+ res.data.phone +'</p>'
+        phone_html+= '</div>'
+        phone_html+= '</li>'
+        phone_html+= '<li>'
+        phone_html+= '<i class="iconfont icon-dizhi"></i>'
+        phone_html+= '<p>'+ res.data.address +'</p>'
+        phone_html+= '</li>'
+
+        $('.phone_footer_top').html(phone_html)
+
+        var phone_htmls= ''
+
+        phone_htmls+= '<li>'
+        phone_htmls+= '<a target="_blank" href="'+ res.data.icp_url +'">Copright 版权所有 天津权鹏集团有限公司 津ICP备'+ res.data.icp_num +'</a>'
+        phone_htmls+= '</li>'
+        phone_htmls+= '<li>'
+        phone_htmls+= '<a target="_blank" href="'+ res.data.net_url +'">'
+        phone_htmls+= '<img src="../image/footer-copyright.png" alt="">'
+        phone_htmls+= '<p>津公网安备 '+ res.data.net_num +'号</p>'
+        phone_htmls+= '</a>'
+        phone_htmls+= '</li>'
+
+        $('.phone_footer_bottom').html(phone_htmls)
+
+    })
+
+
+
+
+
+</script>
+

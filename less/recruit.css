@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#content {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+#content .content_title {
+  display: flex;
+  padding-bottom: 40px;
+}
+#content .content_title span {
+  width: 50%;
+  font-weight: bold;
+  text-align: center;
+}
+#content .content_title span span {
+  color: #999999;
+  font-size: 32px;
+  cursor: pointer;
+}
+#content .content_title_span_color span {
+  color: #F38200 !important;
+}
+#content .content_urgent {
+  display: none;
+  flex-direction: column;
+}
+#content .content_urgent li {
+  border: 1px solid #E6E6E6;
+  margin-bottom: 32px;
+}
+#content .content_urgent li .content_urgent_li_title {
+  padding: 17px 32px;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 400;
+}
+#content .content_urgent li .content_urgent_li_title_click {
+  background: #00AAFF;
+  color: white;
+}
+#content .content_urgent li .content_urgent_li {
+  height: 0;
+  padding: 0 32px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+#content .content_urgent li .content_urgent_li .content_urgent_li_salary {
+  display: flex;
+}
+#content .content_urgent li .content_urgent_li .content_urgent_li_salary h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333333;
+}
+#content .content_urgent li .content_urgent_li .content_urgent_li_salary span {
+  font-size: 22px;
+  color: #1672F9;
+}
+#content .content_urgent li .content_urgent_li .content_urgent_li__p {
+  font-size: 16px;
+  color: #999999;
+  margin: 16px 0 24px;
+}
+#content .content_urgent li .content_urgent_li .content_urgent_li_station h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #1672F9;
+}
+#content .content_urgent li .content_urgent_li .content_urgent_li_station li {
+  border: none;
+  padding: 0;
+  margin: 16px 0;
+  color: #999999;
+  font-size: 16px;
+}
+#content .content_urgent li .content_urgent_li .content_urgent_li_station li p {
+  padding: 0;
+  margin: 16px 0;
+  color: #999999;
+  font-size: 16px;
+}
+#content .content_flex {
+  display: flex;
+}
+/*# sourceMappingURL=recruit.css.map */

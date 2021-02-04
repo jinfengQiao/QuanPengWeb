@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--less样式-->
+    <link rel="stylesheet/less" href="./less/joinIn.less">
+    <link rel="stylesheet/less" href="./less/banner_half.less">
+    <link rel="stylesheet/less" href="./less/footer.less">
+    <script src="https://cdn.bootcdn.net/ajax/libs/less.js/3.11.3/less.min.js"></script>
+    <!--icon图标-->
+    <link rel="stylesheet" href="./icon/iconfont.css">
+    <!--jquery-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--wow-->
+    <link rel="stylesheet" href="./js/wow/animate.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
+
+    <link rel="icon" href="./image/icon.png"/>
+    <title>招商加盟</title>
+</head>
+<style>
+    /*.input_b{*/
+    /*    width: 100%;*/
+    /*    height: 100px;*/
+    /*    display: flex;*/
+    /*    justify-content: flex-start;*/
+    /*    align-items: center;*/
+    /*    margin-top: 100px;*/
+    /*    background: #00AAFF;*/
+    /*}*/
+    /*.b_box{*/
+    /*    position: relative;*/
+    /*}*/
+    /*.img_b{*/
+    /*    position: absolute;*/
+    /*    left: 0;*/
+    /*    top: 0;*/
+    /*    width: 42px;*/
+    /*    height: 52px;*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*}*/
+    /*.img_b_1{*/
+    /*    width: 22px;*/
+    /*    height: 20px;*/
+    /*}*/
+    /*.img_b_2{*/
+    /*    width: 22px;*/
+    /*    height: 22px;*/
+    /*}*/
+    /*.img_b_3{*/
+    /*    width: 17px;*/
+    /*    height: 22px;*/
+    /*}*/
+    /*.img_b .line_1{*/
+    /*    position: absolute;*/
+    /*    right: 0;*/
+    /*    top: 19px;*/
+    /*    width: 1px;*/
+    /*    height: 14px;*/
+    /*    background: #B0B0B0;*/
+    /*}*/
+    /*.input_b input,.input_b select{*/
+    /*    width: 230px;*/
+    /*    height: 52px;*/
+    /*    padding: 0 50px;*/
+    /*    box-sizing: border-box;*/
+    /*    font-size: 14px;*/
+    /*    font-family: Microsoft YaHei;*/
+    /*    font-weight: 400;*/
+    /*    outline: none;*/
+    /*    border: 0;*/
+    /*    margin-right: 10px;*/
+    /*}*/
+    /*.input_b button{*/
+    /*    width: 150px;*/
+    /*    height: 52px;*/
+    /*    background: #F2B42A;*/
+    /*    font-size: 14px;*/
+    /*    font-family: Microsoft YaHei;*/
+    /*    font-weight: 400;*/
+    /*    color: #FFFFFF;*/
+    /*    outline: none;*/
+    /*    border: 0;*/
+    /*}*/
+</style>
+<body>
+<div id="nav">
+
+</div>
+<div id="content">
+<!--    是否被以下问题所困扰？-->
+<!--    <div class="input_b">-->
+<!--        <div class="b_box">-->
+<!--            <div class="img_b">-->
+<!--                <img src="image/joinIn/b_box_icon1.png" alt="" class="img_b_1">-->
+<!--                <div class="line_1"></div>-->
+<!--            </div>-->
+<!--            <select name="" id="cmbProvince">-->
+<!--                <option value="volvo">请选择</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div class="b_box">-->
+<!--            <div class="img_b">-->
+<!--                <img src="image/joinIn/b_box_icon1.png" alt="" class="img_b_1">-->
+<!--                <div class="line_1"></div>-->
+<!--            </div>-->
+<!--            <select name="" id="cmbCity">-->
+<!--                <option value="volvo">请选择</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div class="b_box">-->
+<!--            <div class="img_b">-->
+<!--                <img src="image/joinIn/b_box_icon2.png" alt="" class="img_b_2">-->
+<!--                <div class="line_1"></div>-->
+<!--            </div>-->
+<!--            <input type="text" placeholder="如：赵先生">-->
+<!--        </div>-->
+<!--        <div class="b_box">-->
+<!--            <div class="img_b">-->
+<!--                <img src="image/joinIn/b_box_icon3.png" alt="" class="img_b_3">-->
+<!--                <div class="line_1"></div>-->
+<!--            </div>-->
+<!--            <input type="text" name="" oninput="value=value.replace(/[^\d]/g,'')" placeholder="请输入联系方式">-->
+<!--        </div>-->
+<!--        <button>免费获取方案</button>-->
+<!--    </div>-->
+    <div class="puzzled">
+        <div class="container">
+            <div class="puzzled_1_he">
+                <span>PUZZLED</span>
+                <div class="title">是否被以下问题所困扰？</div>
+            </div>
+            <div class="posi_b">
+                <span>
+                    <p>可供创业的选择很多，但一直无法抉择</p>
+                    <img src="image/joinIn/posi_le_img.png" alt="" class="posi_le">
+                    <img src="image/joinIn/posi_ri_img.png" alt="" class="posi_ri">
+                </span>
+            </div>
+            <div class="puzzled_1_co wow fadeInDown">
+                <ul>
+                    <li>
+                        <div class="puzzled_li_b">
+                            <div class="title">想创业却不知做什么好</div>
+                            <div class="title_top">
+                                <span>ENTREPRENEURSHIP</span>
+                                <p>缺乏创业项目</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="puzzled_li_b">
+                            <div class="title">对财税不了解<br>找不到切入点</div>
+                            <div class="title_top">
+                                <span>EMPLOYED</span>
+                                <p>缺乏从业经验</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="puzzled_li_b">
+                            <div class="title">没开过公司<br>不知如何组建团队</div>
+                            <div class="title_top">
+                                <span>MANAGEMENT</span>
+                                <p>缺乏管理经验</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="puzzled_li_b">
+                            <div class="title">市场竞争激烈<br>担心无法赚钱</div>
+                            <div class="title_top">
+                                <span>ANAEMIA</span>
+                                <p>害怕血本无归</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--    创业帮助-->
+    <div class="shipHelp">
+        <div class="container">
+            <div class="btn_b">
+                <button type="button">立即获取创业帮助</button>
+            </div>
+            <div class="posi_b posi_b_puzz">
+                <span>
+                    <p>传统财税公司陷入瓶颈，公司盈利越来越难</p>
+                    <img src="image/joinIn/posi_le_img.png" alt="" class="posi_le">
+                    <img src="image/joinIn/posi_ri_img.png" alt="" class="posi_ri">
+                </span>
+            </div>
+            <ul class="wow fadeInDown">
+                <li>
+                    <div class="li_box">
+                        <img src="image/joinIn/posi_b_puzz_img1.png" alt="">
+                        <div class="title">
+                            <img src="image/joinIn/posi_b_puzz_icon1.png" alt="">
+                            <span>客户负增长</span>
+                        </div>
+                        <p>拓展新客难，老客户也在流失</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_box">
+                        <img src="image/joinIn/posi_b_puzz_img2.png" alt="">
+                        <div class="title">
+                            <img src="image/joinIn/posi_b_puzz_icon2.png" alt="">
+                            <span>会计效率低</span>
+                        </div>
+                        <p>使用传统记账方法，服务成本过高</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_box">
+                        <img src="image/joinIn/posi_b_puzz_img3.png" alt="">
+                        <div class="title">
+                            <img src="image/joinIn/posi_b_puzz_icon3.png" alt="">
+                            <span>无品牌影响力</span>
+                        </div>
+                        <p>公司知名度不高，客户很难产生信任感</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_box">
+                        <img src="image/joinIn/posi_b_puzz_img4.png" alt="">
+                        <div class="title">
+                            <img src="image/joinIn/posi_b_puzz_icon4.png" alt="">
+                            <span>公司盈利困难</span>
+                        </div>
+                        <p>行业无标准化，低价扰乱市场，产品单一，无可持续发展</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="tet_b">
+                权友财税依托互联网+财税系统和丰富的业务线及周边，助力合作伙伴实现产品多元化，提升市场竞争力
+            </div>
+            <div class="btn_b_1 wow fadeInDown">
+                <button type="button">快速获取解决方案</button>
+            </div>
+        </div>
+
+
+    </div>
+<!--    为什么加盟-->
+    <div class="whyJoin">
+        <div class="container">
+            <div class="puzzled_3_he">
+                <span>WHY JOIN</span>
+                <div class="title">为什么加盟权友财税？</div>
+            </div>
+            <div class="puzzled_3_co">
+                <div class="puzzled_3_co_b puzzled_3_co_b_1 wow fadeInDown">
+                    <div class="puzzled_3_co_le">
+                        <div class="circular_b animation"></div>
+                        <div class="circular">
+                            <span>成熟的运营体系</span>
+                            <div class="dian1 animation"></div>
+                            <div class="dian2 animation"></div>
+                            <div class="dian3 animation"></div>
+                            <div class="dian4 animation"></div>
+                            <div class="dian5 animation"></div>
+                        </div>
+                    </div>
+                    <div class="puzzled_3_co_ri">
+                        <ul>
+                            <li>
+                                <img src="image/joinIn/puzzled_3_co_ri_icon.png" alt="">
+                                <span>创新板挂牌企业背书</span>
+                            </li>
+                            <li>
+                                <img src="image/joinIn/puzzled_3_co_ri_icon.png" alt="">
+                                <span>成功的营销方案</span>
+                            </li>
+                            <li>
+                                <img src="image/joinIn/puzzled_3_co_ri_icon.png" alt="">
+                                <span>高效的服务体系</span>
+                            </li>
+                            <li>
+                                <img src="image/joinIn/puzzled_3_co_ri_icon.png" alt="">
+                                <span>丰富的产品体系</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="puzzled_3_co_b puzzled_3_co_b_2 wow fadeInDown">
+                    <div class="puzzled_3_co_le">
+                        <div class="circular_b circular_b_2 animation2"></div>
+                        <div class="circular circular_2">
+                            <span>强大的技术保障</span>
+                            <div class="dian1 dian6 animation2"></div>
+                            <div class="dian2 dian6 animation2"></div>
+                            <div class="dian3 dian6 animation2"></div>
+                            <div class="dian4 dian6 animation2"></div>
+                            <div class="dian5 dian6 animation2"></div>
+                        </div>
+                    </div>
+                    <div class="puzzled_3_co_ri">
+                        <ul>
+                            <li>
+                                <img src="image/joinIn/puzzled_3_co_ri_icon.png" alt="">
+                                <span>智能记账</span>
+                            </li>
+                            <li>
+                                <img src="image/joinIn/puzzled_3_co_ri_icon.png" alt="">
+                                <span>一键报税</span>
+                            </li>
+                            <li>
+                                <img src="image/joinIn/puzzled_3_co_ri_icon.png" alt="">
+                                <span>发票扫描</span>
+                            </li>
+                            <li>
+                                <img src="image/joinIn/puzzled_3_co_ri_icon.png" alt="">
+                                <span>手机查账</span>
+                            </li>
+                            <li>
+                                <img src="image/joinIn/puzzled_3_co_ri_icon.png" alt="">
+                                <span>协同运营</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_b wow fadeInDown">
+                    <button type="button">立即获取创业帮助</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    为合作伙伴赋能，打造企业盈利体系-->
+    <div class="successful">
+        <div class="puzzled_1_he">
+            <span>SUCCESSFUL</span>
+            <div class="title">为合作伙伴赋能，打造企业盈利体系</div>
+        </div>
+        <div class="successful_co">
+            <div class="container">
+                <ul class="wow fadeInDown">
+                    <li>
+                        <div class="positive">
+                            <div class="color_b color_b_1"></div>
+                            <div class="tet_b">STEP 1</div>
+                            <img src="image/joinIn/successful_img1.png" alt="">
+                            <p>产品赋能</p>
+                        </div>
+                        <div class="back_side color_b_1">
+                            <span>产品赋能</span>
+                            <p>拥有资质审批、税筹、高新、知识产权等多方位资源渠道</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="positive">
+                            <div class="color_b color_b_2"></div>
+                            <div class="tet_b">STEP 2</div>
+                            <img src="image/joinIn/successful_img2.png" alt="">
+                            <p>品牌建设</p>
+                        </div>
+                        <div class="back_side color_b_2">
+                            <span>品牌建设</span>
+                            <p>提供集团VI体系，服务统一标准化，总部资源输出</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="positive">
+                            <div class="color_b color_b_3"></div>
+                            <div class="tet_b">STEP 3</div>
+                            <img src="image/joinIn/successful_img3.png" alt="">
+                            <p>集团培训</p>
+                        </div>
+                        <div class="back_side color_b_3">
+                            <span>集团培训</span>
+                            <p>系统工具使用、团队管理、营销拓客、服务体系等一系列培训</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="positive">
+                            <div class="color_b color_b_4"></div>
+                            <div class="tet_b">STEP 4</div>
+                            <img src="image/joinIn/successful_img4.png" alt="">
+                            <p>经营指导</p>
+                        </div>
+                        <div class="back_side color_b_4">
+                            <span>经营指导</span>
+                            <p>成功模式输出，公司运营标准化建立，日常疑问解答</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn_b_1 wow fadeInDown" style="margin-top: 90px;">
+                    <button type="button">点击了解更多</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    加盟流程-->
+    <div class="process">
+        <div class="puzzled_1_he">
+            <span style="color: #ECECEC;">PROCESS</span>
+            <div class="title">加盟流程</div>
+        </div>
+        <div class="posi_b">
+            <span>
+                <p>加盟权友财税，成功近在眼前</p>
+                <img src="image/joinIn/posi_le_img.png" alt="" class="posi_le">
+                <img src="image/joinIn/posi_ri_img.png" alt="" class="posi_ri">
+            </span>
+        </div>
+        <div class="process_co">
+            <div class="img_b wow fadeInDown">
+                <img src="image/joinIn/process_img.png" alt="">
+            </div>
+            <div class="tet_b wow fadeInDown">
+                <ul>
+                    <li>
+                        <div class="line_b">
+                            01
+                            <span></span>
+                        </div>
+                        <div class="bold_b">线上咨询</div>
+                        <p>客户经理与您对接，根据实际情况，确认加盟意向</p>
+                    </li>
+                    <li>
+                        <div class="line_b">
+                            02
+                            <span></span>
+                        </div>
+                        <div class="bold_b">审核评估</div>
+                        <p>营业资质，服务能力评分</p>
+                    </li>
+                    <li>
+                        <div class="line_b">
+                            03
+                            <span></span>
+                        </div>
+                        <div class="bold_b">签署合同</div>
+                        <p>签署合作协议，缴纳保证金，发放加盟授权</p>
+                    </li>
+                    <li>
+                        <div class="line_b">
+                            04
+                            <span></span>
+                        </div>
+                        <div class="bold_b">加盟交付</div>
+                        <p>系统账号开通、VI体系提供、培训指导、营销体系搭建
+                            服务体系建设</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--    公司荣誉-->
+    <div class="honor">
+        <div class="container_1">
+            <div class="puzzled_1_he">
+                <span>HONOR</span>
+                <div class="title">公司荣誉</div>
+            </div>
+            <div class="honor_co wow fadeInDown">
+                <div class="position_b"></div>
+                <div class="honor_co_1">
+                    <div class="blue_b"></div>
+                    <div class="honor_le">
+                        <ul>
+                            <li class="li_add">
+                                <div class="le_b">
+                                    <span>2020-12-11</span>
+                                    <p>滨海创新板挂牌</p>
+                                </div>
+                                <div class="img_b_1"></div>
+                            </li>
+                            <li>
+                                <div class="le_b">
+                                    <span>2020-09-29</span>
+                                    <p>天津软协会员单位</p>
+                                </div>
+                                <img src="image/joinIn/honor_le_icon.png" alt="">
+                            </li>
+                            <li>
+                                <div class="le_b">
+                                    <span>2020-02-28</span>
+                                    <p>企业信用评价3A认证</p>
+                                </div>
+                                <img src="image/joinIn/honor_le_icon.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="honor_ri">
+                        <div class="toggle" id="toggle">
+                            <img src="image/joinIn/honor_ri_img1.png" alt="" id="img">
+                        </div>
+                        <div class="tog_le">
+                            <img src="image/joinIn/honor_ri_icon1.png" alt="" onclick="leftClick()">
+                        </div>
+                        <div class="tog_ri">
+                            <img src="image/joinIn/honor_ri_icon2.png" alt="" onclick="rightClick()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<footer>
+    <div class="footer"></div>
+</footer>
+</body>
+<script>
+
+
+
+
+
+
+
+
+    // 引入html文件
+    $(function(){
+        // 导航栏
+        $("#nav").load("./public/banner_half.html");
+
+        // 底部
+        $(".footer").load("./public/footer.html");
+    });
+
+
+    // wow
+    let screen_width= document.body.clientWidth
+
+    // console.log(screen_width)
+
+    if(screen_width > 1024) {
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    }
+
+    // 问题块鼠标经过效果
+    $(".puzzled_1_co ul li").mouseover(function () {
+        $(this).addClass('puzz_li_add').siblings().removeClass('puzz_li_add');
+    }).mouseout(function () {
+        $(this).removeClass('puzz_li_add');
+    });
+    $('.shipHelp ul li').mouseover(function () {
+        $(this).children('.li_box').addClass('puzzled_2_addLi').siblings().children('.li_box').removeClass('puzzled_2_addLi');
+    }).mouseout(function () {
+        $(this).children('.li_box').removeClass('puzzled_2_addLi');
+    });
+
+    $('.honor_le ul li').click(function (){
+       $(this).addClass('li_add').siblings().removeClass('li_add');
+        // if($(this).index() == 0){
+        //     this.num = 0
+        // }
+        // if($(this).index() == 1){
+        //     this.num = 1
+        // }
+        // if($(this).index() == 2){
+        //     this.num = 2
+        // }
+        num = $(this).index();
+        changeImg();
+
+    });
+
+    var num = 0;
+    var timer = null;
+    var content = document.getElementById("toggle");
+    var img = document.getElementById("img");
+    var arrUrl = ["../image/joinIn/honor_ri_img1.png","../image/joinIn/honor_ri_img2.png","../image/joinIn/honor_ri_img3.png"];
+    function leftClick(){
+        num--;
+        if (num == -1){
+            num = arrUrl.length-1;//如果到了第一张，返回最后一张
+        }
+        changeImg();
+        if(num == 0){
+            $('.honor_le ul li:first-child').addClass('li_add').siblings().removeClass('li_add');
+        }
+        if(num == 1){
+            $('.honor_le ul li:nth-child(2)').addClass('li_add').siblings().removeClass('li_add');
+        }
+        if(num == 2){
+            $('.honor_le ul li:last-child').addClass('li_add').siblings().removeClass('li_add');
+        }
+    }
+    function rightClick(){
+        num++;
+        if (num == arrUrl.length){
+            num = 0;//如果是最后一张，则返回第一张
+        }
+        changeImg();
+        if(num == 0){
+            $('.honor_le ul li:first-child').addClass('li_add').siblings().removeClass('li_add');
+        }
+        if(num == 1){
+            $('.honor_le ul li:nth-child(2)').addClass('li_add').siblings().removeClass('li_add');
+        }
+        if(num == 2){
+            $('.honor_le ul li:last-child').addClass('li_add').siblings().removeClass('li_add');
+        }
+    }
+
+    setTimeout(autoPlay(),1000);//延迟1秒执行自动切换
+    //鼠标移入清除定时器，鼠标移出恢复
+    content.onmouseover = function (ev) {
+        clearInterval(timer);
+    };
+    content.onmouseout = autoPlay;
+    function changeImg() {
+        img.src = arrUrl[num];//改变图片src位置
+    }
+    function autoPlay() {
+        timer = setInterval(function () {
+            num++;
+            num %= arrUrl.length;
+            changeImg();
+            if(num == 0){
+                $('.honor_le ul li:first-child').addClass('li_add').siblings().removeClass('li_add');
+            }
+            if(num == 1){
+                $('.honor_le ul li:nth-child(2)').addClass('li_add').siblings().removeClass('li_add');
+            }
+            if(num == 2){
+                $('.honor_le ul li:last-child').addClass('li_add').siblings().removeClass('li_add');
+            }
+        },3000);
+    }
+    // 为合作伙伴赋能，打造企业盈利体系
+    $(".successful_co ul li").hover(
+        function(){
+            $(this).children('.positive').stop(true,true).animate(
+                {top:"328px"},600
+            )
+        },
+        function(){
+            $(this).children('.positive').stop(true,true).animate(
+                {top:"0px"},600
+            )
+        }
+    )
+
+
+
+</script>
+</html>

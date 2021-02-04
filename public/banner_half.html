@@ -1,0 +1,335 @@
+<div id="to_play_header">
+    <div class="nav">
+        <img class="nav_logo" src="" alt="">
+        <ul class="headList">
+<!--            <li>-->
+<!--                <a href="../index/index.html?id=1">首页</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="">商事服务</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/Toplay.html?id=2">财税策划</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/Daikai.html">自然人代开</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/Flexible.html?id=3">灵活用工</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="">网络货运</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/industry.html">行业资讯</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="../index/AboutUs.html">走进权鹏</a>-->
+<!--            </li>-->
+        </ul>
+    </div>
+    <div class="contents">
+<!--        <div class="content">-->
+<!--            <div class="ling">-->
+<!--                <h2>税</h2>-->
+<!--                <h2>务筹划</h2>-->
+<!--            </div>-->
+<!--            <h3>精准节流，&nbsp;用专业指引用户<br>-->
+<!--                专为企业税收筹划</h3>-->
+<!--        </div>-->
+    </div>
+</div>
+
+<div id="phone">
+    <div id="phone_nav">
+        <div>
+            <img src="./image/phone_logo.png" alt="">
+            <div style="display: none;">
+                <div class="open">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="phone_nav_img">
+<!--        <img src="http://of.kurohane.com/uploads/20200819/bbbfcc27001387ee0efce8c3aea33f5e.jpg" alt="">-->
+    </div>
+</div>
+
+
+<script>
+    // localStorage.setItem('http', 'http://of.kurohane.com/api/')
+    // localStorage.setItem('url', 'http://of.kurohane.com')
+
+    localStorage.setItem('http', "https://of.tjqpjt.com/api/")
+    localStorage.setItem('url', "http://quanpeng.oss-cn-zhangjiakou.aliyuncs.com/")
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+
+    var id= getUrlParam('id')
+
+
+    // 获取导航栏
+    $.post(localStorage.getItem('http') + 'nav/get_top_nav',{},function(res){
+        console.log(res.data);
+        var html= '',
+            check_id = id;
+
+        if (check_id == 9){
+            check_id = 3;
+        }
+
+        $.each(res.data,function(key,val){
+
+            if(check_id == val.id) {
+                html += '<li class="headList_a">';
+            }else{
+                html += '<li>';
+            }
+
+            if(val.id == 2) {
+                html += '<a target="_blank" href="'+ val.link +'">'+val.name+'</a>';
+                html += '</li>';
+            }else{
+                html += '<a href="'+ val.link +'?id='+ val.id +'">'+val.name+'</a>';
+                html += '</li>';
+            }
+        })
+
+        $('.headList').html(html)
+
+    });
+
+
+    // 获取banner
+    $.post(localStorage.getItem('http') + 'banner/get_list',{
+        nav_id: id
+    },function (res) {
+        console.log(res.data)
+
+        var html= ''
+        var htmls= ''
+
+        var pic_url = res.data[0].pic_url;
+
+        console.log(res.data[0].pic_url);
+
+        $('#to_play_header').css({
+            "background": "url(" + pic_url +") no-repeat",
+            "background-size": 'cover'
+        })
+
+        htmls+= '<img src="'+ pic_url +'" alt="">'
+
+        $('.phone_nav_img').html(htmls)
+
+
+        $.each(res.data,function (key,val) {
+            console.log(id)
+            if(id== 3) {
+
+                // 税务筹划
+
+                var desc = val.desc;
+                desc = desc.split(" ");
+                // console.log(desc)
+                html += '<div class="content">'
+                html += '<div class="ling">'
+                html += '<h2>'+ val.title.substring(0,1) +'</h2>'
+                html += '<h2>'+ val.title.substring(1) +'</h2>'
+                html += '</div>'
+                html += '<h3>';
+                $.each(desc,function(k,v){
+                    html += k > 0 ? "<br/>" : "";
+                    html += v;
+                });
+                html += '</h3>';
+                html += '</div>'
+            }else if(id== 4) {
+                // 自认然代开'
+                var desc = val.desc;
+
+                desc = desc.split(" ");
+                html += '<div class="Daikai">'
+                html += '<h2>'+ val.title +'</h2>'
+                html += '<p>';
+                $.each(desc,function(k,v){
+                    // var num= v.substring( v.indexOf("{")+1 ,v.indexOf("}") )
+                    // var str= v.replace('{'+ num +'}','')
+                    html += k > 0 ? "<br/>" : "";
+                    html += v;
+                    // html += '<span>'+ num +'</span>'
+                });
+                html += '</p>'
+                html += '</div>'
+            }else if (id== 5){
+                // 灵活用工
+                html += '<div style="display: flex; width: 100%; height: 100%; position: relative">'
+                html += '<a class="Flexible" target="_blank" href="'+ val.link +'"></a>'
+                html += '</div>'
+            }else if(id== 7) {
+                // 行业资讯
+                html += '<div class="industry">'
+                html += '<h2>'+ val.title +'</h2>'
+                html += '<p>'+ val.desc +'</p>'
+                html += '</div>'
+            }else if(id== 8) {
+                // 走进权鹏
+                html += '<div class="AboutUs">'
+                html += '<h2>'+ val.title +'</h2>'
+                html += '<p>'+ val.desc +'</p>'
+                html += '</div>'
+             }else if(id== 17) {
+                // 招商加盟
+                html += '<div class="Join_in">'
+                html += '<h2>'+ val.title +'</h2>'
+                html += '<p>'+ val.desc +'</p>'
+
+                html += '<div class="input_b">'
+                html += '<div class="b_box b_box_1">'
+                html += '<div class="img_b_b">'
+                html += '<img src="image/joinIn/b_box_icon1.png" alt="" class="img_b_1">'
+                html += '<div class="line_1"></div>'
+                html += '</div>'
+                html += '<select name="" id="cmbProvince">'
+                html += '<option value="volvo">请选择</option>'
+                html += '</select>'
+                html += '</div>'
+                html += '<div class="b_box b_box_1">'
+                html += '<div class="img_b_b">'
+                html += '<img src="image/joinIn/b_box_icon1.png" alt="" class="img_b_1">'
+                html += '<div class="line_1"></div>'
+                html += '</div>'
+                html += '<select name="" id="cmbCity">'
+                html += '<option value="volvo">请选择</option>'
+                html += '</select>'
+                html += '</div>'
+                html += '<div class="b_box">'
+                html += '<div class="img_b_b">'
+                html += '<img src="image/joinIn/b_box_icon2.png" alt="" class="img_b_2">'
+                html += '<div class="line_1"></div>'
+                html += '</div>'
+                html += '<input type="text" placeholder="如：赵先生" id="name_item">'
+                html += '</div>'
+                html += '<div class="b_box">'
+                html += '<div class="img_b_b">'
+                html += '<img src="image/joinIn/b_box_icon3.png" alt="" class="img_b_3">'
+                html += '<div class="line_1"></div>'
+                html += '</div>'
+                html += '<input type="text" name="" placeholder="请输入联系方式" id="phone_item">'
+                html += '</div>'
+                html += '<button onclick="btn_click()">免费获取方案</button>'
+                html += '</div>'
+                html += '</div>'
+            }
+        })
+        $('.contents').html(html);
+
+        $(function (){
+            let province = $('#cmbProvince');
+            let city = $('#cmbCity');
+            loadProvinces(province);
+            loadCitys(city);
+        })
+
+
+        function loadProvinces(province){
+            $.post(localStorage.getItem('http') + 'region/get_region',{
+                pid:0
+            },function (res) {
+                // console.log(res.data)
+                addDataToSelect(res.data,province);
+            })
+        }
+
+        function loadCitys(city){
+            $('#cmbProvince').change(function (){
+                $.post(localStorage.getItem('http') + 'region/get_region',{
+                    pid:0,
+                },function (res) {
+                    console.log(res.data)
+                    var id = res.data[$('#cmbProvince').find("option:selected").val()-1].id
+                    console.log(id)
+                    get_id(id);
+                })
+                function get_id(id){
+                    $.post(localStorage.getItem('http') + 'region/get_region',{
+                        pid:id,
+                    },function (res) {
+                        console.log(res.data)
+                        addDataToSelect(res.data,city);
+                    })
+                }
+                // if('#cmbCity>option'.value != 0){
+                //     $('#cmbCity').change(function (){
+                //         $.post(localStorage.getItem('http') + 'region/get_region',{
+                //             pid:id,
+                //         },function (res) {
+                //             console.log(res.data)
+                //             var id = res.data[$('#cmbCity').find("option:selected").val()-1].id
+                //             console.log(id)
+                //         })
+                //     })
+                // }else{
+                //     console.log('无变化')
+                //     $.post(localStorage.getItem('http') + 'region/get_region',{
+                //         pid:id,
+                //     },function (res) {
+                //         console.log(res.data)
+                //         var id = res.data[$('#cmbCity').find("option",0).val()].id
+                //         console.log(id)
+                //     })
+                // }
+
+                $('#cmbProvince').children('option').first().hide();
+
+            })
+        }
+
+
+        function addDataToSelect(array,selectobj){
+            selectobj.empty();
+            var aaa = $('#cmbProvince>option').val();
+            console.log(aaa)
+            if(aaa != 0){
+                $('<option>').attr("value",0).html("请选择").appendTo(selectobj);
+            }
+            $.each(array,(index,value)=>{
+                $('<option>').attr('value',index+1).html(value.name).appendTo(selectobj);
+            })
+        }
+
+    })
+
+
+    // logo
+    $.post(localStorage.getItem('http') + 'setting/get_detail',{},function (res) {
+        // logo
+        $('.nav_logo').attr('src', res.data.logo_url)
+    })
+
+    function btn_click(){
+        var province_id = ''
+        var city_id = ''
+        var name = document.getElementById('name_item').value
+        var phone = document.getElementById('phone_item').value
+        console.log(name)
+        console.log(phone)
+        // $.post(localStorage.getItem('http') + 'module/fast_reg',{
+        //     province_id:'',
+        //     city_id:'',
+        //     name:'',
+        //     phone:''
+        // },function (res) {
+        //     console.log(res)
+        // })
+    }
+
+
+</script>

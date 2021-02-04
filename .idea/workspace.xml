@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="42ffa659-4121-485d-9e22-04ede462bbe9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Less File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1dOCXUST7isxUDA4mby9SnItwYI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="CSS&#10;LESS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shoppingphone" />
+    <property name="list.type.of.created.stylesheet" value="Less" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="px2rwdSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\QuanPengWeb\js" />
+      <recent name="D:\QuanPengWeb\js\swiper" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\QuanPengWeb\js" />
+      <recent name="D:\QuanPengWeb\less" />
+      <recent name="D:\QuanPengWeb\public" />
+      <recent name="D:\QuanPengWeb\public\index" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="Daikai.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/QuanPengWeb/index/Daikai.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="banner.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/QuanPengWeb/public/banner.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/QuanPengWeb/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.Daikai.html" />
+        <item itemvalue="JavaScript Debug.banner.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42ffa659-4121-485d-9e22-04ede462bbe9" name="Default Changelist" comment="" />
+      <created>1592286791542</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592286791542</updated>
+      <workItem from="1592286792635" duration="21000" />
+      <workItem from="1592286958901" duration="22781000" />
+      <workItem from="1592354171594" duration="30915000" />
+      <workItem from="1592440868206" duration="27776000" />
+      <workItem from="1592527640365" duration="470000" />
+      <workItem from="1592550982556" duration="9689000" />
+      <workItem from="1592786262293" duration="29469000" />
+      <workItem from="1592871760747" duration="29619000" />
+      <workItem from="1592958725098" duration="24845000" />
+      <workItem from="1592992930155" duration="7000" />
+      <workItem from="1593305478566" duration="622000" />
+      <workItem from="1593307613744" duration="25512000" />
+      <workItem from="1593390710035" duration="1210000" />
+      <workItem from="1593412826188" duration="10373000" />
+      <workItem from="1593477812094" duration="18240000" />
+      <workItem from="1593587007432" duration="480000" />
+      <workItem from="1593656119602" duration="4384000" />
+      <workItem from="1593661516617" duration="10673000" />
+      <workItem from="1593736992329" duration="4805000" />
+      <workItem from="1593769437548" duration="971000" />
+      <workItem from="1593911864000" duration="2730000" />
+      <workItem from="1593935766143" duration="5948000" />
+      <workItem from="1593995411683" duration="23708000" />
+      <workItem from="1594027323647" duration="5034000" />
+      <workItem from="1594082229968" duration="27275000" />
+      <workItem from="1594168778061" duration="28887000" />
+      <workItem from="1594255194623" duration="5965000" />
+      <workItem from="1594285144661" duration="222000" />
+      <workItem from="1594287565443" duration="3446000" />
+      <workItem from="1594347701622" duration="407000" />
+      <workItem from="1594351285588" duration="742000" />
+      <workItem from="1594551726173" duration="253000" />
+      <workItem from="1594688461293" duration="244000" />
+      <workItem from="1594694016037" duration="213000" />
+      <workItem from="1594697428264" duration="3356000" />
+      <workItem from="1594806295451" duration="223000" />
+      <workItem from="1594811692650" duration="245000" />
+      <workItem from="1594865779574" duration="6203000" />
+      <workItem from="1594875724878" duration="3524000" />
+      <workItem from="1594888161519" duration="119000" />
+      <workItem from="1594888819668" duration="51000" />
+      <workItem from="1594891359961" duration="2504000" />
+      <workItem from="1594976187852" duration="396000" />
+      <workItem from="1595154302083" duration="872000" />
+      <workItem from="1595307735383" duration="8000" />
+      <workItem from="1595314954458" duration="286000" />
+      <workItem from="1595315517995" duration="21000" />
+      <workItem from="1595379513647" duration="93000" />
+      <workItem from="1595380390882" duration="1055000" />
+      <workItem from="1595566900686" duration="6645000" />
+      <workItem from="1595573739750" duration="748000" />
+      <workItem from="1595750659919" duration="11000" />
+      <workItem from="1596091847620" duration="733000" />
+      <workItem from="1596101204571" duration="815000" />
+      <workItem from="1597382987102" duration="107000" />
+      <workItem from="1597632815395" duration="61000" />
+      <workItem from="1597640772252" duration="58000" />
+      <workItem from="1597640886817" duration="3000" />
+      <workItem from="1597814112272" duration="14592000" />
+      <workItem from="1597885294945" duration="3344000" />
+      <workItem from="1597893519415" duration="23077000" />
+      <workItem from="1597971200847" duration="16183000" />
+      <workItem from="1598060525187" duration="1522000" />
+      <workItem from="1598087362271" duration="190000" />
+      <workItem from="1598146235243" duration="1810000" />
+      <workItem from="1599727449569" duration="803000" />
+      <workItem from="1601342648412" duration="1883000" />
+      <workItem from="1601350963763" duration="7459000" />
+      <workItem from="1601426795790" duration="6858000" />
+      <workItem from="1601434439546" duration="228000" />
+      <workItem from="1601434761937" duration="14000" />
+      <workItem from="1602220465674" duration="647000" />
+      <workItem from="1602724408555" duration="740000" />
+      <workItem from="1602726782757" duration="650000" />
+      <workItem from="1602837224664" duration="3018000" />
+      <workItem from="1602840825341" duration="118000" />
+      <workItem from="1603069863913" duration="844000" />
+      <workItem from="1603359986085" duration="780000" />
+      <workItem from="1605769665077" duration="2761000" />
+      <workItem from="1610170282339" duration="324000" />
+      <workItem from="1610328031824" duration="2587000" />
+      <workItem from="1610352044403" duration="174000" />
+      <workItem from="1610443699484" duration="400000" />
+      <workItem from="1611652334498" duration="195000" />
+      <workItem from="1611889418500" duration="13628000" />
+      <workItem from="1612140323336" duration="6000" />
+      <workItem from="1612142920893" duration="22929000" />
+      <workItem from="1612228715092" duration="21334000" />
+      <workItem from="1612258677110" duration="38000" />
+      <workItem from="1612329431769" duration="1211000" />
+      <workItem from="1612332629361" duration="762000" />
+      <workItem from="1612341676330" duration="3502000" />
+    </task>
+    <task id="LOCAL-00001" summary="7.6">
+      <created>1593999514280</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593999514280</updated>
+    </task>
+    <task id="LOCAL-00002" summary="7.6">
+      <created>1594023078774</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594023078774</updated>
+    </task>
+    <task id="LOCAL-00003" summary="7.7">
+      <created>1594082308335</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594082308335</updated>
+    </task>
+    <task id="LOCAL-00004" summary="7.8">
+      <created>1594201608756</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594201608757</updated>
+    </task>
+    <task id="LOCAL-00005" summary="7.9">
+      <created>1594265134381</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1594265134381</updated>
+    </task>
+    <task id="LOCAL-00006" summary="7.12">
+      <created>1594551745660</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594551745660</updated>
+    </task>
+    <task id="LOCAL-00007" summary="7.16">
+      <created>1594872102155</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594872102155</updated>
+    </task>
+    <task id="LOCAL-00008" summary="7.16-2">
+      <created>1594879164426</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1594879164426</updated>
+    </task>
+    <task id="LOCAL-00009" summary="8.14">
+      <created>1597383036555</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597383036555</updated>
+    </task>
+    <task id="LOCAL-00010" summary="8.21">
+      <created>1597991949857</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597991949857</updated>
+    </task>
+    <task id="LOCAL-00011" summary="8.22">
+      <created>1598061686358</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598061686358</updated>
+    </task>
+    <task id="LOCAL-00012" summary="8.22">
+      <created>1598061830168</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598061830168</updated>
+    </task>
+    <task id="LOCAL-00013" summary="9.29">
+      <created>1601359617444</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1601359617444</updated>
+    </task>
+    <task id="LOCAL-00014" summary="9.29">
+      <created>1601359693209</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1601359693209</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="7.6" />
+    <MESSAGE value="7.7" />
+    <MESSAGE value="7.8" />
+    <MESSAGE value="7.9" />
+    <MESSAGE value="7.12" />
+    <MESSAGE value="7.16" />
+    <MESSAGE value="7.16-2" />
+    <MESSAGE value="8.14" />
+    <MESSAGE value="8.21" />
+    <MESSAGE value="8.22" />
+    <MESSAGE value="9.29" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.29" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605777386943">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605777386943" />
+    <state x="1105" y="252" width="596" height="632" key="find.popup" timestamp="1605772842717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1105" y="252" width="596" height="632" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605772842717" />
+    <state x="1092" y="242" key="run.anything.popup" timestamp="1612330022846">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1092" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612330022846" />
+    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1612148247849">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612148247849" />
+  </component>
+</project>
