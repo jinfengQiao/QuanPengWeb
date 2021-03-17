@@ -26,7 +26,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42ffa659-4121-485d-9e22-04ede462bbe9" name="Default Changelist" comment="" />
+    <list default="true" id="42ffa659-4121-485d-9e22-04ede462bbe9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/develop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/less/develop.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AboutUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/AboutUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Approved.html" beforeDir="false" afterPath="$PROJECT_DIR$/Approved.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daikai.html" beforeDir="false" afterPath="$PROJECT_DIR$/Daikai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flexible.html" beforeDir="false" afterPath="$PROJECT_DIR$/Flexible.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toplay.html" beforeDir="false" afterPath="$PROJECT_DIR$/Toplay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm.html" beforeDir="false" afterPath="$PROJECT_DIR$/crm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/industry.html" beforeDir="false" afterPath="$PROJECT_DIR$/industry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/industryDeta.html" beforeDir="false" afterPath="$PROJECT_DIR$/industryDeta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joinIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/joinIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/less/Flexible.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/Flexible.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/less/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/banner_half.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/banner_half.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recruit.html" beforeDir="false" afterPath="$PROJECT_DIR$/recruit.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,6 +219,15 @@
       <workItem from="1612329431769" duration="1211000" />
       <workItem from="1612332629361" duration="762000" />
       <workItem from="1612341676330" duration="3502000" />
+      <workItem from="1612426877240" duration="533000" />
+      <workItem from="1612660790082" duration="3082000" />
+      <workItem from="1614843044036" duration="1167000" />
+      <workItem from="1614926479453" duration="1805000" />
+      <workItem from="1615021524698" duration="333000" />
+      <workItem from="1615253359663" duration="2345000" />
+      <workItem from="1615791364501" duration="8846000" />
+      <workItem from="1615800299848" duration="1072000" />
+      <workItem from="1615950575415" duration="11551000" />
     </task>
     <task id="LOCAL-00001" summary="7.6">
       <created>1593999514280</created>
@@ -344,18 +372,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="9.29" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605777386943">
+    <state x="815" y="417" key="Github.ShareDialog" timestamp="1612426905264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605777386943" />
-    <state x="1105" y="252" width="596" height="632" key="find.popup" timestamp="1605772842717">
+    <state x="815" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612426905264" />
+    <state x="707" y="224" key="Github.UntrackedFilesDialog" timestamp="1612426921979">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1105" y="252" width="596" height="632" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605772842717" />
-    <state x="1092" y="242" key="run.anything.popup" timestamp="1612330022846">
+    <state x="707" y="224" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612426921979" />
+    <state x="662" y="223" width="596" height="594" key="find.popup" timestamp="1615793116828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1092" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612330022846" />
+    <state x="662" y="223" width="596" height="594" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615793116828" />
+    <state x="1092" y="242" key="run.anything.popup" timestamp="1615793942629">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1092" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615793942629" />
     <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1612148247849">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

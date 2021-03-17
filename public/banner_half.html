@@ -60,11 +60,11 @@
 
 
 <script>
-    // localStorage.setItem('http', 'http://of.kurohane.com/api/')
-    // localStorage.setItem('url', 'http://of.kurohane.com')
+    localStorage.setItem('http', 'http://of.kurohane.com/api/')
+    localStorage.setItem('url', 'http://of.kurohane.com')
 
-    localStorage.setItem('http', "https://of.tjqpjt.com/api/")
-    localStorage.setItem('url', "http://quanpeng.oss-cn-zhangjiakou.aliyuncs.com/")
+    // localStorage.setItem('http', "https://of.tjqpjt.com/api/")
+    // localStorage.setItem('url', "http://quanpeng.oss-cn-zhangjiakou.aliyuncs.com/")
 
     function getUrlParam(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
@@ -224,88 +224,75 @@
                 html += '</div>'
                 html += '<input type="text" name="" placeholder="请输入联系方式" id="phone_item">'
                 html += '</div>'
-                html += '<button onclick="btn_click()">免费获取方案</button>'
+                html += '<button type="button" onclick="btn_click()">免费获取方案</button>'
                 html += '</div>'
+                html += '</div>'
+            }else if(id== 18) {
+                // 软件开发
+                html += '<div class="develop">'
+                html += '<h2>'+ val.title +'</h2>'
+                html += '<p>'+ val.desc +'</p>'
                 html += '</div>'
             }
         })
         $('.contents').html(html);
 
+
         $(function (){
             let province = $('#cmbProvince');
             let city = $('#cmbCity');
             loadProvinces(province);
-            loadCitys(city);
+
+            $(document).on("change","#cmbProvince",function(){
+                var province_id = $(this).val();
+                // console.log(province_id);
+                loadCities(province_id,city);
+            });
+
+            function loadProvinces(province){
+                $.post(localStorage.getItem('http') + 'region/get_region',{
+                    pid:0
+                },function (res) {
+                    console.log(res.data)
+                    addDataToSelect(res.data,province);
+                })
+            }
+
+            function loadCities(province_id,city){
+                if (province_id == 0){
+                    addDataToSelect([],city);
+                    return false;
+                }
+                // 省改变时  获取选中的id
+                $.post(localStorage.getItem('http') + 'region/get_region',{
+                    pid:province_id,
+                },function (res) {
+                    addDataToSelect(res.data,city);
+                })
+                $('#cmbCity').children('option').first().hide();
+            }
+
+
+
+            function addDataToSelect(array,selectobj){
+                selectobj.empty();
+                $('<option>').attr("value",0).html("请选择").appendTo(selectobj);
+                $.each(array,(index,value)=>{
+                    $('<option>').attr('value',value.id).html(value.name).appendTo(selectobj);
+                })
+            }
+
+            // 点击按钮跳转页面
+            $('.problem button,.process button,.whyJoin button').click(function (){
+                location.href = 'https://dft.zoosnet.net/LR/Chatpre.aspx?id=DFT45969991&lng=cn'
+            })
+
         })
 
 
-        function loadProvinces(province){
-            $.post(localStorage.getItem('http') + 'region/get_region',{
-                pid:0
-            },function (res) {
-                // console.log(res.data)
-                addDataToSelect(res.data,province);
-            })
-        }
-
-        function loadCitys(city){
-            $('#cmbProvince').change(function (){
-                $.post(localStorage.getItem('http') + 'region/get_region',{
-                    pid:0,
-                },function (res) {
-                    console.log(res.data)
-                    var id = res.data[$('#cmbProvince').find("option:selected").val()-1].id
-                    console.log(id)
-                    get_id(id);
-                })
-                function get_id(id){
-                    $.post(localStorage.getItem('http') + 'region/get_region',{
-                        pid:id,
-                    },function (res) {
-                        console.log(res.data)
-                        addDataToSelect(res.data,city);
-                    })
-                }
-                // if('#cmbCity>option'.value != 0){
-                //     $('#cmbCity').change(function (){
-                //         $.post(localStorage.getItem('http') + 'region/get_region',{
-                //             pid:id,
-                //         },function (res) {
-                //             console.log(res.data)
-                //             var id = res.data[$('#cmbCity').find("option:selected").val()-1].id
-                //             console.log(id)
-                //         })
-                //     })
-                // }else{
-                //     console.log('无变化')
-                //     $.post(localStorage.getItem('http') + 'region/get_region',{
-                //         pid:id,
-                //     },function (res) {
-                //         console.log(res.data)
-                //         var id = res.data[$('#cmbCity').find("option",0).val()].id
-                //         console.log(id)
-                //     })
-                // }
-
-                $('#cmbProvince').children('option').first().hide();
-
-            })
-        }
-
-
-        function addDataToSelect(array,selectobj){
-            selectobj.empty();
-            var aaa = $('#cmbProvince>option').val();
-            console.log(aaa)
-            if(aaa != 0){
-                $('<option>').attr("value",0).html("请选择").appendTo(selectobj);
-            }
-            $.each(array,(index,value)=>{
-                $('<option>').attr('value',index+1).html(value.name).appendTo(selectobj);
-            })
-        }
-
     })
+
+
 
 
     // logo
@@ -315,20 +302,74 @@
     })
 
     function btn_click(){
-        var province_id = ''
-        var city_id = ''
-        var name = document.getElementById('name_item').value
-        var phone = document.getElementById('phone_item').value
-        console.log(name)
-        console.log(phone)
-        // $.post(localStorage.getItem('http') + 'module/fast_reg',{
-        //     province_id:'',
-        //     city_id:'',
-        //     name:'',
-        //     phone:''
-        // },function (res) {
-        //     console.log(res)
-        // })
+
+
+            var name = document.getElementById('name_item').value,
+                phone = document.getElementById('phone_item').value,
+                province_id = $("#cmbProvince").val(),
+                city_id = $("#cmbCity").val();
+
+            //province_id   必填
+            if(province_id != null && province_id != '' && province_id != 0){
+                this.province_id = province_id
+            }
+            else{
+                layer.msg('请选择省');
+                return  false;
+            }
+            //city_id   必填
+            if(city_id != null && city_id != '' && city_id != 0){
+                this.city_id = city_id
+            }
+            else{
+                layer.msg('请选择市');
+                return  false;
+            }
+            //name  正则  必填
+            var nameReg = /^[\u4e00-\u9fa5]{2,6}$/;  //定义约束,要求输入2到6个中文
+            if(name && nameReg.test(name)){
+                this.name = name
+            }
+            else{
+                layer.msg('请输入姓名');
+                return  false;
+            }
+            //phone 正则  必填
+            var phoneReg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+            if(phone && phoneReg.test(phone)) {
+                this.phone = phone
+            }
+            else{
+                layer.msg('请输入手机号');
+                return  false;
+            }
+
+            $.post(localStorage.getItem('http') + 'module/fast_reg',{
+                province_id:province_id,
+                city_id:city_id,
+                name:name,
+                phone:phone
+            },function (res) {
+                console.log(res)
+                if(res.code == 1) {
+                    // $('#cmbProvince').val('请选择');
+                    var cmbProvince = document.getElementById('cmbProvince');
+                    var opts_1= cmbProvince.getElementsByTagName("option");
+                    opts_1[0].selected=true;
+                    // $('#cmbCity').val('请选择');
+                    var cmbCity = document.getElementById('cmbCity');
+                    var opts_2 = cmbCity.getElementsByTagName("option");
+                    opts_2[0].selected=true;
+                    $('#name_item').val('');
+                    $('#phone_item').val('');
+                    layer.msg(res.msg);
+                }else{
+                    console.log(res.msg);
+                    layer.msg(res.msg);
+                }
+            })
+
+
     }
 
 

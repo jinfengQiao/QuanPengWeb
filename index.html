@@ -9,6 +9,9 @@
 		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 		<script src="./js/jparticle.jquery.min.js"></script>
 		<script src="./js/anime.min.js"></script>
+<!--		layer-->
+		<link href="//cdn.bootcss.com/layer/3.0.1/skin/default/layer.css" rel="stylesheet">
+		<script src="//cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
 
 		<!--阿里图标-->
 		<link rel="stylesheet" href="./icon/iconfont.css">
@@ -42,6 +45,16 @@
 
 		<title>权友财税-权鹏集团官网</title>
 		<meta name="keywords" content="权鹏集团,权鹏集团,权鹏集团">
+
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?174ed9804ea40f6ed7a93e63c2a4c7d1";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
 	</head>
 	<body>
 	<div id="swiper"></div>
@@ -375,19 +388,19 @@
 					</div>
 					<div class="business_right">
 						<div class="businessRightText">
-							<p>01</p>
+							<span>01</span>
 							<p>平台与企业签订相关协议，通过平台进行资金的结算。</p>
 						</div>
 						<div class="businessRightText">
-							<p>02</p>
+							<span>02</span>
 							<p>企业通过平台对自由职业者发放劳动所得，平台自动代扣个人所得税到税务局。</p>
 						</div>
 						<div class="businessRightText">
-							<p>03</p>
+							<span>03</span>
 							<p>自由职业者通过平台获得合理合法的税后所得以及税务局开具的完税证明。</p>
 						</div>
 						<div class="businessRightText" style="margin-bottom: 0;">
-							<p>04</p>
+							<span>04</span>
 							<p>平台开具增值税发票反馈到企业。</p>
 						</div>
 					</div>
@@ -640,22 +653,29 @@
 			}
 		})
 
-		
+
 
 		// 马上联系我
-		$('.contactB button').click(function(){
+		$('.contactB').click(function(){
 			$.post(localStorage.getItem('http') + 'module/fast_reg',{
 				name: $('#nameI').val(),
-			    phone: $('#phoneI').val(),
-			    area: $('#areaI').val(),
-			    company_name: $('#company_nameI').val(),
-			    is_reg_address: $('.radioBox1 input:radio[name="address"]:checked').val(),
-			    is_check: $('.radioBox2 input:radio[name="checkName"]:checked').val()
+				phone:$('#phoneI').val(),
+				area:$('#areaI').val(),
+				company_name:$('#company_nameI').val(),
+				is_reg_address: $('.radioBox1 input:radio[name="address"]:checked').val(),
+				is_check: $('.radioBox2 input:radio[name="checkName"]:checked').val()
 			},function(res){
-				// console.log(res.data);
-				alert(res.msg);
+				console.log(res.data);
 				if(res.code == 1){
-					window.location.reload();
+					$('#nameI').val('');
+					$('#phoneI').val('');
+					$('#areaI').val('');
+					$('#company_nameI').val('');
+					layer.msg(res.msg);
+				}else{
+					console.log(res.msg);
+					$('.popu_b_i').val(res.msg);
+					layer.msg(res.msg);
 				}
 			})
 		})

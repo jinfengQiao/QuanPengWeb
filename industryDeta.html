@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -33,6 +34,15 @@
 
     <link rel="icon" href="./image/icon.png"/>
     <title>行业资讯-详情</title>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?174ed9804ea40f6ed7a93e63c2a4c7d1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
 
@@ -195,7 +205,7 @@
             </div>
 
             <!--上一篇下一篇-->
-            <div class="content_left_button">
+            <div class="content_left_button" style="margin-top:40px;">
                 <a class="prev" href="">上一篇</a>
                 <a class="next" href="">下一篇</a>
             </div>
@@ -268,7 +278,8 @@
 
             if(res.data.prev_id) {
                 $('.prev').attr('href','./industryDeta.html?id=7&ids=' + res.data.prev_id)
-            }else if(res.data.next_id) {
+            }
+            if(res.data.next_id) {
                 $('.next').attr('href','./industryDeta.html?id=7&ids=' + res.data.next_id)
             }
 
