@@ -98,7 +98,7 @@
                             <span>技术积累</span>
                             <div class="line_b"></div>
                             <p>
-                                人均研发经验5年以上
+                                人均研发经验5年以上<br/>
                                 技术人员占比超70%
                             </p>
                         </div>
@@ -108,7 +108,7 @@
                             <span>服务至上</span>
                             <div class="line_b"></div>
                             <p>
-                                7*24小时售后支持
+                                7*24小时售后支持<br/>
                                 驻场服务、远程服务
                             </p>
                         </div>
@@ -118,7 +118,7 @@
                             <span>团队服务</span>
                             <div class="line_b"></div>
                             <p>
-                                项目组专项负责
+                                项目组专项负责<br/>
                                 专门注重高效率
                             </p>
                         </div>
@@ -128,7 +128,7 @@
                             <span>国际化质量</span>
                             <div class="line_b"></div>
                             <p>
-                                16道缜密管理流程
+                                16道缜密管理流程<br/>
                                 质量就是生命线
                             </p>
                         </div>
@@ -138,17 +138,17 @@
                             <span>定制方案</span>
                             <div class="line_b"></div>
                             <p>
-                                定制开发追求品质
+                                定制开发追求品质<br/>
                                 按客户需求按时交工
                             </p>
                         </div>
                         <div class="swiper-slide">
-                            <img src="image/develop/guarantee_img6.png" alt="">
+                            <img src="image/develop/guarantee_img6.png"  alt="">
                             <img src="image/develop/guarantee_img6_sel.png" alt="" class="img_sel">
                             <span>成本优化</span>
                             <div class="line_b"></div>
                             <p>
-                                价格透明
+                                价格透明<br/>
                                 拒绝模糊报价
                             </p>
                         </div>
@@ -206,6 +206,10 @@
 </footer>
 </body>
 <script>
+    // var imgList = [
+    //     {title:}
+    // ];
+
     // 引入html文件
     $(function(){
         // 公用css
@@ -304,25 +308,58 @@
             el: '.swiper-pagination',
             clickable: true,
         },
+        onTransitionStart: function(swiper){
+            $('.swiper-slide').eq(swiper.activeIndex).find('img').first().addClass('img_sel').siblings().removeClass('img_sel')
+            $('.swiper-slide').eq(swiper.activeIndex - 1).find('img').first().removeClass('img_sel').next().addClass('img_sel')
+        },
+        // onSlidePrevTransitionEnd:function(){
+        //     console.log('pre');
+        // },
+        // onTouchEnd:function(swiper){
+        //     console.log(swiper.swipeDirection);
+        //     if(swiper.swipeDirection == 'next'){
+        //         $('.swiper-slide').eq(swiper.activeIndex).find('img').first().addClass('img_sel').next().removeClass('img_sel')
+        //         $('.swiper-slide').siblings().eq(swiper.activeIndex).find('img').first().removeClass('img_sel').next().addClass('img_sel')
+        //     }else if(swiper.swipeDirection == 'prev'){
+        //         $('.swiper-slide').eq(swiper.activeIndex).find('img').first().addClass('img_sel').next().removeClass('img_sel')
+        //         $('.swiper-slide').siblings().eq(swiper.activeIndex + 1).find('img').first().removeClass('img_sel').next().addClass('img_sel')
+        //     }
+        // },
+        // onTransitionEnd: function(swiper){
+        //     $('.swiper-slide').eq(swiper.activeIndex).find('img').first().removeClass('img_sel').next().addClass('img_sel')
+        // },
+        // ontransitionend: function(swiper){
+        //     console.log(swiper)
+        //     // console.log($('.swiper-slide').eq(swiper.activeIndex).find('img').firstChild());
+        //     // $('.swiper-slide').eq(swiper.activeIndex).find('img').firstChild().addClass('.img_sel').siblings().removeClass('.img_sel')
+        //     // $('.swiper-slide').eq(swiper.activeIndex).find('img').last().removeClass('img_sel')
+        //     // $('.swiper-slide').eq(swiper.activeIndex).css('display', 'none')
+        //     // console.log($('.swiper-slide'))
+        //
+        // },
+        // swiper.$wrapperEl.transitionEnd(function () {
+        //     alert('swiper自带transitionEnd不会触发，这是自定义的');
+        // });
+
+
+
     });
 
-    // var count=3000; //这里设置的是3秒
-    // window.setInterval(go,1500);
-    // function go(){
-    //     count--;
-    //     queryTab();
-    // }
-    //
+    // window.setInterval("queryTab()",1500);
+    // // queryTab();
     // function queryTab() {
-    //     let allTab = $('.swiper-wrapper').children
-    //     console.log(allTab);
+    //     let allTab = $('.swiper-wrapper')[0].children
     //     for (var i = 0; i < allTab.length; i++) {
     //         if (allTab[i].classList.contains('swiper-slide-duplicate-active') == true) {
-    //             console.log(allTab[i])
+    //             console.log('包含')
+    //             allTab[i].firstElementChild.style.display = 'none'
+    //             allTab[i].firstElementChild.nextElementSibling.style.display = 'block'
     //         } else {
-    //             Rc.el('.main-query-content').style.display = 'none';
+    //             console.log('不包含')
     //         }
     //     }
+    //
+    //
     // }
 
 
